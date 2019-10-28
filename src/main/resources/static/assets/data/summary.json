@@ -1,0 +1,37 @@
+[
+    {
+        "date": "2019-10-20",
+        "payableAmt": 12500,
+        "receivableAmt": 0
+    },
+    {
+        "date": "2019-10-21",
+        "payableAmt": 0,
+        "receivableAmt": 45000
+    },
+    {
+        "date": "2019-10-22",
+        "payableAmt": 0,
+        "receivableAmt": 22400
+    },
+    {
+        "date": "2019-10-23",
+        "payableAmt": 0,
+        "receivableAmt": 53050
+    },
+    {
+        "date": "2019-10-24",
+        "payableAmt": 66000,
+        "receivableAmt": 65000
+    },
+    {
+        "date": "2019-10-25",
+        "payableAmt": 36000,
+        "receivableAmt": 20000
+    },
+    {
+        "date": "2019-10-26",
+        "payableAmt": 36000,
+        "receivableAmt": 0
+    }
+]
