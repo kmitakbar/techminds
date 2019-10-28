@@ -18,7 +18,7 @@ import com.techminds.apar.poc.service.AccountSummeryService;
 
 @RestController
 @RequestMapping("/accounts/api/v1")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AccountSummary {
 	
 	@Autowired
