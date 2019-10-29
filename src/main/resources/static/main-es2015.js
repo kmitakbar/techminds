@@ -515,9 +515,10 @@ let AccountsService = class AccountsService {
     constructor(http) {
         this.http = http;
         //private  _url:string='/assets/data/summary.json';
-        this._url = 'http://localhost:8080/accounts/api/v1/summery';
-        this.pay_url = 'http://localhost:8080/accounts/api/v1/payables?date=';
-        this.receive_url = 'http://localhost:8080/accounts/api/v1/receivables?date=';
+        this.base_url = 'http://apar-apar-v1.apps.us-west-1.starter.openshift-online.com/';
+        this._url = this.base_url + 'accounts/api/v1/summery';
+        this.pay_url = this.base_url + 'accounts/api/v1/payables?date=';
+        this.receive_url = this.base_url + '/accounts/api/v1/receivables?date=';
     }
     getSummaryData() {
         return this.http.get(this._url);
