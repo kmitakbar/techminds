@@ -514,12 +514,14 @@ __webpack_require__.r(__webpack_exports__);
 let AccountsService = class AccountsService {
     constructor(http) {
         this.http = http;
-        //private  _url:string='/assets/data/summary.json';
-        this.base_url = 'http://apar-apar-v1.apps.us-west-1.starter.openshift-online.com/';
+        this.base_url = '';
+        this._url = '';
+        this.base_url = window.location.port == '4200' ? 'http://localhost:8080/' : '/';
         this._url = this.base_url + 'accounts/api/v1/summery';
         this.pay_url = this.base_url + 'accounts/api/v1/payables?date=';
-        this.receive_url = this.base_url + '/accounts/api/v1/receivables?date=';
+        this.receive_url = this.base_url + 'accounts/api/v1/receivables?date=';
     }
+    //private  _url:string='/assets/data/summary.json';
     getSummaryData() {
         return this.http.get(this._url);
     }
@@ -604,6 +606,8 @@ let AppComponent = class AppComponent {
     }
     childEventClicked(event) {
         this.clickedEvent = event;
+    }
+    ngOnInit() {
     }
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

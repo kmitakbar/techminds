@@ -549,12 +549,14 @@
             var AccountsService = /** @class */ (function () {
                 function AccountsService(http) {
                     this.http = http;
-                    //private  _url:string='/assets/data/summary.json';
-                    this.base_url = 'http://apar-apar-v1.apps.us-west-1.starter.openshift-online.com/';
+                    this.base_url = '';
+                    this._url = '';
+                    this.base_url = window.location.port == '4200' ? 'http://localhost:8080/' : '/';
                     this._url = this.base_url + 'accounts/api/v1/summery';
                     this.pay_url = this.base_url + 'accounts/api/v1/payables?date=';
-                    this.receive_url = this.base_url + '/accounts/api/v1/receivables?date=';
+                    this.receive_url = this.base_url + 'accounts/api/v1/receivables?date=';
                 }
+                //private  _url:string='/assets/data/summary.json';
                 AccountsService.prototype.getSummaryData = function () {
                     return this.http.get(this._url);
                 };
@@ -628,6 +630,8 @@
                 }
                 AppComponent.prototype.childEventClicked = function (event) {
                     this.clickedEvent = event;
+                };
+                AppComponent.prototype.ngOnInit = function () {
                 };
                 return AppComponent;
             }());
