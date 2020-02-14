@@ -33,6 +33,7 @@ public class AccountSummary {
 	@RequestMapping("/payables")
 	public @ ResponseBody List<AccountPayable> getAccountPayables(@RequestParam("date") String date) {
 
+		System.out.println("tes");
 		return payableService.getAccountPayable(date);
 	}
 	
